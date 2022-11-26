@@ -41,3 +41,12 @@ bool StringUtils::startsWith(const std::string& str, const std::string& prefix)
 {
 	return str.size() >= prefix.size() && str.compare(0, prefix.size(), prefix) == 0;
 }
+
+bool StringUtils::findString(std::string baseString, std::string findString)
+{
+	bool FOUND = false;
+	std::size_t LOCAL_NPOS = std::string::npos, FOUND_STRING = baseString.find(findString);
+	if (!baseString.empty() && !findString.empty()) {
+		FOUND = (FOUND_STRING != LOCAL_NPOS);
+	} return FOUND;
+}

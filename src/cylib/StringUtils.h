@@ -12,6 +12,7 @@ public:
 	static std::string toLowerString(std::string __str__);
 	static bool strCompare(std::string __stra__, std::string __strb__);
 	static bool startsWith(const std::string& str, const std::string& prefix);
+	static bool findString(std::string baseString, std::string findString);
 };
 
 #endif // StrUtils.h
