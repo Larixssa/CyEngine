@@ -2,6 +2,15 @@
 
 project ("CyEngine")
 
+set (CY_SRC_BROSWER
+	src/browser/Broswer.cpp
+	src/browser/Broswer.h
+	src/browser/Link.cpp
+	src/browser/Link.h
+)
+
+source_group("browser" FILES ${CY_SRC_BROWSER})
+
 set (CY_SRC_CMDUTILS
 	src/commandutils/Command.cpp
 	src/commandutils/Command.h
