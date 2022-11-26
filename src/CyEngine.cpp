@@ -3,8 +3,4 @@
 #include<iostream>
 #include "Init.h"
 
-int main()
-{
-	Init::initClient(false, true, true);
-	return 0;
-}
+int main(int argc, char **argv) { Init::initClient(false, true, true); return 0;  }

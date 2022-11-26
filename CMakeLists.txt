@@ -60,6 +60,8 @@ set (CY_SRC_INIT
 )
 
 set (CY_SRC_SUBINIT
+	src/init/subinit/InputGen.cpp
+	src/init/subinit/InputGen.h
 	src/init/subinit/TitleGen.cpp
 	src/init/subinit/TitleGen.h
 )
@@ -106,6 +108,7 @@ source_group("cylib" FILES ${CY_LIB})
 source_group("cylib\\sys" FILES ${CY_LIB_SYS})
 
 set(CY_SOURCE_FILES
+	${CY_SRC_BROWSER}
 	${CY_SRC_CMDUTILS}
 	${CY_SRC_IO}
 	${CY_SRC_DISPLAY}
