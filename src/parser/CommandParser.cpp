@@ -40,7 +40,9 @@ void CommandParser::handleCommand(std::string cmdInput)
 
 	for (int i = 0; i < commandsListSize; i++)
 	{
-		doParse = (StringUtils::strCompare(cmdInput, commandTable[i]));
+		if (StringUtils::strCompare(cmdInput, commandTable[i])) {
+			doParse = true;
+		}
 	}
 
 	if (doParse) {

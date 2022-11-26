@@ -2,19 +2,21 @@
 #include "parser/CommandParser.h"
 #include "init/Init.h"
 #include "cylib/StringUtils.h"
+#include "sys/ProcessExec.h"
 
 #include<string>
 
-void helpCommand(std::string tParse)
+void CommandsSource::helpCommand()
 {
 	CommandParser::outCommandList();
 }
 
-void exitCommand(std::string tParse)
+void CommandsSource::clearCommand()
 {
-	if (StringUtils::strCompare(tParse, "exit")) {
-		exit(0);
-	} else {
-		Init::initClient(false, false, false);
-	}
+	ProcessExec::processClearScreen();
+}
+
+void CommandsSource::exitCommand()
+{
+	exit(0);
 }
