@@ -23,13 +23,27 @@ set (CY_SRC_IO
 source_group("cystdio" FILES ${CY_SRC_IO})
 
 set (CY_SRC_DISPLAY
-	src/display/Title.cpp
-	src/display/Title.h
+	src/display/ConsoleMessageDisplayer.cpp
+	src/display/ConsoleMessageDisplayer.h
 	src/display/Linebar.cpp
 	src/display/Linebar.h
+	src/display/Prompt.cpp
+	src/display/Prompt.h
+	src/display/Title.cpp
+	src/display/Title.h
 )
 
 source_group("display" FILES ${CY_SRC_DISPLAY})
+
+set (CY_SRC_GUI_UTILS
+	src/gui/guiutils/GuiGuide.cpp
+	src/gui/guiutils/GuiGuide.h
+	src/gui/guiutils/GuiTitle.cpp
+	src/gui/guiutils/GuiTitle.h
+)
+
+# source_group("gui" FILES)
+source_group("gui\\guiutils" FILES ${CY_SRC_GUI_UTILS})
 
 set (CY_SRC_INIT
 	src/init/Init.cpp
@@ -86,6 +100,7 @@ set(CY_SOURCE_FILES
 	${CY_SRC_CMDUTILS}
 	${CY_SRC_IO}
 	${CY_SRC_DISPLAY}
+	${CY_SRC_GUI_UTILS}
 	${CY_SRC_INIT}
 	${CY_SRC_SUBINIT}
 	${CY_SRC_PARSER}
