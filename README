@@ -1,0 +1,11 @@
+###### CyEngine ######
+
+* A Command-Line-Interface (CLI) Engine for creating, parsing and executing commands
+provided with a large utility of libraries that make executing and making commands easier.
+
+* Also provides minimal console GUIs. They are modifiable, customizable and can be made
+by your own from code.
+
+> This was all made in C++ with CMake. (MSVC)
+
+; Lari_ssa <3.
