@@ -7,6 +7,11 @@ std::string StringUtils::quoteString(std::string __content__)
 	return "\"" + __content__ + "\"";
 }
 
+std::string StringUtils::surroundString(std::string __content__, std::string __surround_with_a__, std::string __surround_with_b__)
+{
+	return __surround_with_a__ + __content__ + __surround_with_b__;
+}
+
 std::string StringUtils::toUpperString(std::string __str__)
 {
 	std::string newString;
