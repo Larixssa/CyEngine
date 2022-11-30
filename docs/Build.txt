@@ -17,3 +17,5 @@ cmake --build build --target CyEngine --config Release
 That will make a "build" directory in the current directory
 
 To run the program, go to [build > Release > CyEngine.exe]
+
+You can also type "./build.bat | ./build.sh" and "./run.bat | ./run.sh" to run and build CyEngine
