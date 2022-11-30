@@ -24,7 +24,7 @@ void CommandHandler::parseCommand(std::string* commandsList, std::string cmdIO, 
 
 	for (int i = 0; i < cmdcSize; ++i)
 	{
-		if (StringUtils::strCompare(cmdIO, commandsList[i]))
+		if (StringUtils::startsWith(cmdIO, commandsList[i]))
 		{
 			doParse = true;
 		}
