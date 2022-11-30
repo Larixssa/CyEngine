@@ -1,0 +1,19 @@
+# Building CyEngine
+
+Requirements:
+
+Visual Studio 2022 with C++ development workloads
+CMake 3.2+
+
+To start building, run the following commands:
+
+=========================================================
+git clone https://github.com/Larixssa/CyEngine.git
+cd CyEngine
+cmake -G "Visual Studio 17 2022" -A Win32 -S -Bbuild
+cmake --build build --target CyEngine --config Release
+=========================================================
+
+That will make a "build" directory in the current directory
+
+To run the program, go to [build > Release > CyEngine.exe]
