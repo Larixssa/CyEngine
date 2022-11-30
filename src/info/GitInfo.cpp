@@ -5,6 +5,8 @@
 
 #include<string>
 
+std::string GitInfo::REPOSITORY_LINK = "https://github.com/Larixssa/CyEngine";
+
 void GitInfo::getGitInfo()
 {
 	const int readmeContentSize = 5;
@@ -36,4 +38,9 @@ void GitInfo::getGitInfo()
 	for (int i = 0; i < readmeContentSize; ++i) {
 		CyStdio::cPut(readmeContent[i] + "\n\n");
 	}
+}
+
+std::string GitInfo::getRepoLink()
+{
+	return GitInfo::REPOSITORY_LINK;
 }
