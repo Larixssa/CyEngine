@@ -13,6 +13,16 @@ std::string CyBits::gcNewLn()
 	return "\n";
 }
 
+std::string CyBits::gcTab()
+{
+	return "\t";
+}
+
+std::string CyBits::gcSpace()
+{
+	return " ";
+}
+
 std::string CyBits::repeatString(std::string str, int length)
 {
 	int MAX_LENGTH = 100; 

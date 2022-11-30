@@ -8,6 +8,8 @@ class CyBits
 public:
 	static void ncNewLn();
 	static std::string gcNewLn();
+	static std::string gcTab();
+	static std::string gcSpace();
 	static std::string repeatString(std::string str, int length);
 };
 
