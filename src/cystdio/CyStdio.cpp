@@ -18,3 +18,8 @@ void CyStdio::cPutLn(std::string putStringF)
 		std::cout << putStringF + "\n";
 	}
 }
+
+void CyStdio::cGet(std::string &iStr)
+{ 
+	std::getline(std::cin, iStr); 
+}
