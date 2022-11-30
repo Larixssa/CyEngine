@@ -3,6 +3,7 @@
 #include "subinit/InputGen.h"
 #include "sys/ProcessExec.h"
 #include "parser/CommandParser.h"
+#include "cystdio/CyStdio.h"
 
 #include<iostream>
 #include<string>
@@ -19,7 +20,7 @@ void Init::initClient(bool showOptions, bool showTitle, bool clearScreen)
 
 	InputGen::generateUserInput();
 
-	std::getline(std::cin, cmdInput);
+	CyStdio::cGet(cmdInput);
 
 	if (!cmdInput.empty()) {
 		CommandParser::handleCommand(cmdInput);
