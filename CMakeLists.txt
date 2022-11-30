@@ -44,6 +44,19 @@ set (CY_SRC_DISPLAY
 
 source_group("display" FILES ${CY_SRC_DISPLAY})
 
+set (CY_SRC_GITLIB
+	src/gitlib/GitCmd.cpp
+	src/gitlib/GitCmd.h
+	src/gitlib/GitMD.cpp
+	src/gitlib/GitMD.h
+	src/gitlib/GitRepo.cpp
+	src/gitlib/GitRepo.h
+	src/gitlib/GitRepoInfo.cpp
+	src/gitlib/GitRepoInfo.h
+)
+
+source_group("gitlib" FILES ${CY_SRC_GITLIB})
+
 set (CY_SRC_GUI_UTILS
 	src/gui/guiutils/GuiGuide.cpp
 	src/gui/guiutils/GuiGuide.h
@@ -53,6 +66,15 @@ set (CY_SRC_GUI_UTILS
 
 # source_group("gui" FILES)
 source_group("gui\\guiutils" FILES ${CY_SRC_GUI_UTILS})
+
+set (CY_SRC_INFO
+	src/info/Info.cpp
+	src/info/Info.h
+	src/info/GitInfo.cpp
+	src/info/GitInfo.h
+)
+
+source_group("info" FILES ${CY_SRC_INFO})
 
 set (CY_SRC_INIT
 	src/init/Init.cpp
@@ -86,6 +108,17 @@ set (CY_SRC_PARSER_SOURCES
 source_group("parser" FILES ${CY_SRC_PARSER})
 source_group("parser\\sources" FILES ${CY_SRC_PARSER_SOURCES})
 
+set(CY_SRC_PROCLIB
+	src/proclib/Error.cpp
+	src/proclib/Error.h
+	src/proclib/ProcessHandler.cpp
+	src/proclib/ProcessHandler.h
+	src/proclib/Warning.cpp
+	src/proclib/Warning.h
+)
+
+source_group("proclib" FILES ${CY_SRC_PROCLIB})
+
 set (CY_LIB
 	src/cylib/Convert.cpp
 	src/cylib/Convert.h
@@ -112,11 +145,14 @@ set(CY_SOURCE_FILES
 	${CY_SRC_CMDUTILS}
 	${CY_SRC_IO}
 	${CY_SRC_DISPLAY}
+	${CY_SRC_GITLIB}
 	${CY_SRC_GUI_UTILS}
+	${CY_SRC_INFO}
 	${CY_SRC_INIT}
 	${CY_SRC_SUBINIT}
 	${CY_SRC_PARSER}
 	${CY_SRC_PARSER_SOURCES}
+	${CY_SRC_PROCLIB}
 	${CY_LIB}
 	${CY_LIB_SYS}
 )
@@ -130,7 +166,7 @@ include_directories(
 	src/cylib
 )
 
-add_library(CyEngineSrc STATIC ${CY_SOURCE_FILES})
+add_library(CyEngineSrc STATIC ${CY_SOURCE_FILES} ${CYENGINE_RC})
 
-add_executable (CyEngine src/CyEngine.cpp)
+add_executable (CyEngine src/CyEngine.cpp ${CYENGINE_RC})
 target_link_libraries (CyEngine CyEngineSrc)
