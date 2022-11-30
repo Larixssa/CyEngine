@@ -36,16 +36,5 @@ void CommandParser::handleCommand(std::string cmdInput)
 		"help", "version", "git", "clear", "exit"
 	};
 
-	bool doParse = false;
-
-	for (int i = 0; i < commandsListSize; i++)
-	{
-		if (StringUtils::strCompare(cmdInput, commandTable[i])) {
-			doParse = true;
-		}
-	}
-
-	if (doParse) {
-		CommandCalls::callCommandParser(cmdInput);
-	}
+	CommandHandler::parseCommand(commandTable, cmdInput, commandsListSize);
 }
