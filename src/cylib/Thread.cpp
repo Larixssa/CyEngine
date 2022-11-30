@@ -6,7 +6,8 @@
 		Sleep(msval * 1000);
 	}
 #else
+	#include<unistd.h>
 	void Thread::cSleep(unsigned msval) {
-		Sleep(msval * 1000);
+		usleep(msval * 1000);
 	}
 #endif

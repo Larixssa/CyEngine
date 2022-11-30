@@ -7,14 +7,14 @@ std::string Platform::getPlatform()
 {
 	std::string osString;
 
-	#if _WIN32
+	#ifdef _WIN32
 	osString = "Windows";
-	#elif __linux__
-	osString = "Linux";
-	#else
-	osString = "Unix";
 	#endif
 
+	#ifdef __linux__
+	osString = "Linux";
+	#endif
+	
 	return osString;
 }
 
