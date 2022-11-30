@@ -11,7 +11,7 @@ void CommandCalls::callCommandParser(std::string cmdToParse)
 			CommandsSource::helpCommand();
 		}
 
-		if (StringUtils::strCompare(cmdToParse, "git")) {
+		if (StringUtils::startsWith(cmdToParse, "git")) {
 			CommandsSource::getGitCommand(cmdToParse);
 		}
 
