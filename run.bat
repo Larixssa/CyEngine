@@ -4,4 +4,4 @@
 cmake --build build --target CyEngine --config Release
 
 :: Run
-powershell -command ./build/Release/CyEngine
+powershell -command ./build/Release/CyEngine.exe
