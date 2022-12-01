@@ -1,7 +1,7 @@
 #include "Link.h"
 #include "cylib/StringUtils.h"
 #include "cystdio/CyStdio.h"
-#include "cylib/sys/PlatformVars.h"
+#include "cylib/sys/Platform.h"
 #include "cylib/sys/ProcessExec.h"
 
 #include<string>
@@ -34,7 +34,7 @@ std::string Link::getLink(std::string urlString, std::string protocol)
 	return fullUrl;
 }
 
-void Link::outputLink(std::string url, std::string protocol = "https")
+void Link::outputLink(std::string url, std::string protocol)
 {
 	std::string outUrl = Link::initLink(url, protocol);
 	if (!url.empty() && !protocol.empty()) {
@@ -47,13 +47,13 @@ void Link::openLink(std::string url)
 	std::string commandPrefix;
 	if (!url.empty())
 	{
-		if (PlatformVars::IS_WINDOWS) {
+		if (Platform::checkPlatform("Windows")) {
 			if (!StringUtils::startsWith(url, "http")) {
 				commandPrefix = "start " + Link::getLink(url);
 			} else {
 				commandPrefix = "start " + url;
 			}
-		} else if (PlatformVars::IS_LINUX) {
+		} else if (Platform::checkPlatform("Linux")) {
 			if (!StringUtils::startsWith(url, "http")) {
 				commandPrefix = "xdg-open " + Link::getLink(url);
 			} else {

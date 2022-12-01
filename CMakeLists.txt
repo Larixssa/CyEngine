@@ -2,9 +2,9 @@
 
 project ("CyEngine")
 
-set (CY_SRC_BROSWER
-	src/browser/Broswer.cpp
-	src/browser/Broswer.h
+set (CY_SRC_BROWSER
+	src/browser/Browser.cpp
+	src/browser/Browser.h
 	src/browser/Link.cpp
 	src/browser/Link.h
 )
