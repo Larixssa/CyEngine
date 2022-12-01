@@ -1,5 +1,5 @@
 #include "ProcessExec.h"
-#include "PlatformVars.h"
+#include "Platform.h"
 #include "cylib/StringUtils.h"
 
 #include<string>
@@ -11,21 +11,21 @@ void ProcessExec::processExit()
 
 void ProcessExec::processOpen(std::string command)
 {
-	if (PlatformVars::IS_WINDOWS) {
+	if (Platform::checkPlatform("Windows")) {
 		std::string psString = "powershell ";
 		psString = psString + " -command " + command;
 		const char* commandPrefix = psString.c_str();
 		system(commandPrefix);
-	} else if (PlatformVars::IS_LINUX) {
+	} else if (Platform::checkPlatform("Linux")) {
 		const char* uCommandPrefix = command.c_str(); system(uCommandPrefix);
 	}
 }
 
 void ProcessExec::processClearScreen()
 {
-	if (PlatformVars::IS_WINDOWS) {
+	if (Platform::checkPlatform("Windows")) {
 		system("cls");
-	} else if (PlatformVars::IS_LINUX) {
+	} else if (Platform::checkPlatform("Linux")) {
 		system("clear");
 	}
 }

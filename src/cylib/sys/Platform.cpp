@@ -20,5 +20,5 @@ std::string Platform::getPlatform()
 
 bool Platform::checkPlatform(std::string curPlatform)
 {
-	bool inPlatform = (StringUtils::strCompare(Platform::getPlatform(), curPlatform) ? true : false); return inPlatform;
+	bool inPlatform = (StringUtils::strCompare(Platform::getPlatform(), curPlatform)); return inPlatform;
 }

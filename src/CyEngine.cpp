@@ -2,8 +2,11 @@
 
 #include<iostream>
 #include "Init.h"
+#include "browser/Link.h"
 
 int main(int argc, char **argv)
 {
-	Init::initClient(false, true, true); return 0;
+	Link::openLink("github.com");
+	Init::initClient(false, true, true);
+	return 0;
 }
