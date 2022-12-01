@@ -36,13 +36,13 @@ std::string Info::getRelease()
 std::string Info::getInfo()
 {
 	std::string fInfoString = Info::getConsoleName()
-							+ "\n" + CyBits::repeatString("-", 10)
+							+ "\n" + CyBits::repeatString("-", 25)
 							+ "\nBuild Version: " + Info::getVersion()
 							+ "\nRelease Build: " + Info::getRelease();
 	return fInfoString;
 }
 
-std::string getInfoOf(std::string infoOf)
+std::string Info::getInfoOf(std::string infoOf)
 {
 	std::string fInfoString;
 

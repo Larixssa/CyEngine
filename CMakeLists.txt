@@ -1,4 +1,4 @@
-﻿cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required (VERSION 3.2)
 
 project ("CyEngine")
 
@@ -57,14 +57,23 @@ set (CY_SRC_GITLIB
 
 source_group("gitlib" FILES ${CY_SRC_GITLIB})
 
+set(CY_SRC_GUI
+	src/gui/GitRepoGui.cpp
+	src/gui/GitRepoGui.h
+	src/gui/InfoGui.cpp
+	src/gui/InfoGui.h
+)
+
 set (CY_SRC_GUI_UTILS
+	src/gui/guiutils/BaseGui.cpp
+	src/gui/guiutils/BaseGui.h
 	src/gui/guiutils/GuiGuide.cpp
 	src/gui/guiutils/GuiGuide.h
 	src/gui/guiutils/GuiTitle.cpp
 	src/gui/guiutils/GuiTitle.h
 )
 
-# source_group("gui" FILES)
+source_group("gui" FILES ${CY_SRC_GUI})
 source_group("gui\\guiutils" FILES ${CY_SRC_GUI_UTILS})
 
 set (CY_SRC_INFO
@@ -146,6 +155,7 @@ set(CY_SOURCE_FILES
 	${CY_SRC_IO}
 	${CY_SRC_DISPLAY}
 	${CY_SRC_GITLIB}
+	${CY_SRC_GUI}
 	${CY_SRC_GUI_UTILS}
 	${CY_SRC_INFO}
 	${CY_SRC_INIT}
