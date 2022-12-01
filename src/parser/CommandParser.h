@@ -6,6 +6,7 @@
 class CommandParser
 {
 public:
+	static const int COMMAND_LIST_SIZE;
 	static void outCommandList();
 	static void handleCommand(std::string cmdInput);
 };

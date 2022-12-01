@@ -10,6 +10,7 @@ public:
 	static void versionCommand(std::string tParse);
 	static void getGitCommand(std::string tParse);
 	static void clearCommand();
+	static void reinitCommand();
 	static void exitCommand();
 };
 

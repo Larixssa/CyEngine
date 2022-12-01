@@ -5,15 +5,18 @@
 
 #include<string>
 
+const int CommandParser::COMMAND_LIST_SIZE = 6;
+
 void CommandParser::outCommandList()
 {
-	const int commandListSize = 5;
+	const int commandListSize = CommandParser::COMMAND_LIST_SIZE;
 
 	std::string commandsList[commandListSize] = {
 		"help",
 		"version",
 		"git",
 		"clear",
+		"reinit",
 		"exit"
 	};
 
@@ -22,6 +25,7 @@ void CommandParser::outCommandList()
 		"Get the version of the client.",
 		"Get the project's repository info & link.",
 		"Clear the screen.",
+		"Re-Initialize the console.",
 		"Exit out of the console."
 	};
 
@@ -30,10 +34,11 @@ void CommandParser::outCommandList()
 
 void CommandParser::handleCommand(std::string cmdInput)
 {
-	const int commandsListSize = 5;
+	const int commandsListSize = CommandParser::COMMAND_LIST_SIZE;
 
 	std::string commandTable[commandsListSize] = {
-		"help", "version", "git", "clear", "exit"
+		"help", "version", "git", "clear", "reinit",
+		"exit"
 	};
 
 	CommandHandler::parseCommand(commandTable, cmdInput, commandsListSize);

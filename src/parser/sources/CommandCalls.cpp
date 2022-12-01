@@ -23,6 +23,10 @@ void CommandCalls::callCommandParser(std::string cmdToParse)
 			CommandsSource::clearCommand();
 		}
 
+		if (StringUtils::strCompare(cmdToParse, "reinit")) {
+			CommandsSource::reinitCommand();
+		}
+
 		if (StringUtils::strCompare(cmdToParse, "exit")) {
 			CommandsSource::exitCommand();
 		} else {

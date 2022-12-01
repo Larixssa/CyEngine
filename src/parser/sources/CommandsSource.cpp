@@ -48,6 +48,11 @@ void CommandsSource::clearCommand()
 	ProcessExec::processClearScreen();
 }
 
+void CommandsSource::reinitCommand()
+{
+	Init::initClient(true, true, true);
+}
+
 void CommandsSource::exitCommand()
 {
 	ProcessExec::processClearScreen();
