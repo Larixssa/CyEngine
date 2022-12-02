@@ -11,6 +11,7 @@
 
 // GUI Includes
 #include "gui/GitRepoGui.h"
+#include "gui/IUrlGui.h"
 
 #include<string>
 
@@ -41,6 +42,11 @@ void CommandsSource::getGitCommand(std::string tParse)
 	} else {
 		ProcessExec::processOpen("git"); CyBits::ncNewLn();
 	}
+}
+
+void CommandsSource::iUrlCommand()
+{
+	IUrlGui::load();
 }
 
 void CommandsSource::clearCommand()

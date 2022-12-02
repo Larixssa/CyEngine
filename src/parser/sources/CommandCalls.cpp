@@ -1,6 +1,7 @@
 #include "CommandCalls.h"
 #include "CommandsSource.h"
 #include "cylib/StringUtils.h"
+#include "cystdio/CyBits.h"
 #include "init/Init.h"
 
 void CommandCalls::callCommandParser(std::string cmdToParse)
@@ -19,6 +20,10 @@ void CommandCalls::callCommandParser(std::string cmdToParse)
 			CommandsSource::getGitCommand(cmdToParse);
 		}
 
+		if (StringUtils::strCompare(cmdToParse, "iurl")) {
+			CommandsSource::iUrlCommand();
+		}
+
 		if (StringUtils::strCompare(cmdToParse, "clear")) {
 			CommandsSource::clearCommand();
 		}
@@ -30,7 +35,7 @@ void CommandCalls::callCommandParser(std::string cmdToParse)
 		if (StringUtils::strCompare(cmdToParse, "exit")) {
 			CommandsSource::exitCommand();
 		} else {
-			Init::initClient(false, false, false);
+			CyBits::ncNewLn(); Init::initClient(false, false, false);
 		}
 	}
 }
