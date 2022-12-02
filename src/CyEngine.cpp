@@ -2,11 +2,10 @@
 
 #include<iostream>
 #include "Init.h"
-#include "browser/Link.h"
 
 int main(int argc, char **argv)
 {
-	Link::openLink("github.com");
+	// Smart way to not use main to re-initialize. :sunglasses:
 	Init::initClient(false, true, true);
 	return 0;
 }
