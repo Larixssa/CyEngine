@@ -6,6 +6,7 @@ class BaseGui
 	void create();
 public:
 	static void load();
+	static void update(int status);
 };
 
 #endif // BaseGui.h

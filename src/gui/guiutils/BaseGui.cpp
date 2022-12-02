@@ -18,3 +18,10 @@ void BaseGui::load()
 	// Run create() function from class.
 	bGui.create();
 }
+
+/// <summary>
+///		<para>Used for updating the status of a GUI.</para>
+///		<para>Can be used for GUIs that require input.</para>
+/// </summary>
+/// <param name="status"></param>
+void BaseGui::update(int status) {}

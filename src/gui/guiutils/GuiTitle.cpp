@@ -40,9 +40,11 @@ std::string GuiTitle::createGuiTitle(std::string titleString, std::string specFi
 
 void GuiTitle::displayGuiTitle()
 {
-	CyStdio::cPut(GuiTitle::createGuiTitle(
-		GuiTitle::getDefTitleString(), // Title
-		GuiTitle::getDefSpecFileString(), // Specified File
-		GuiTitle::getDefSubFileString() // Specified Sub-file
+	CyStdio::cPut(CyBits::gcNewLn() + 
+		GuiTitle::createGuiTitle(
+			GuiTitle::getDefTitleString(), // Title
+			GuiTitle::getDefSpecFileString(), // Specified File
+			GuiTitle::getDefSubFileString() // Specified Sub-file
 	));
+	CyStdio::cPut(CyBits::repeatString("\n", 2));
 }
