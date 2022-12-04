@@ -34,12 +34,12 @@ void IUrlGui::create()
 
 	CyStdio::cGet(uInput);
 
-	if (!uInput.empty())
-	{
+	if (!uInput.empty()) {
 		IUrlGui::PARSE_IURL = uInput;
+		update(1);
+	} else {
+		update(0);
 	}
-
-	IUrlGui::update(1);
 }
 
 void IUrlGui::update(int status)
