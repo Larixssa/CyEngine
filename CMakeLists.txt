@@ -62,6 +62,8 @@ set(CY_SRC_GUI
 	src/gui/GitRepoGui.h
 	src/gui/InfoGui.cpp
 	src/gui/InfoGui.h
+	src/gui/IUrlGui.cpp
+	src/gui/IUrlGui.h
 )
 
 set (CY_SRC_GUI_UTILS
@@ -99,6 +101,17 @@ set (CY_SRC_SUBINIT
 
 source_group("init" FILES ${CY_SRC_INIT})
 source_group("init\\subinit" FILES ${CY_SRC_SUBINIT})
+
+set (CY_SRC_MATHLIB
+	src/mathlib/CFormula.cpp
+	src/mathlib/CFormula.h
+	src/mathlib/CMath.cpp
+	src/mathlib/CMath.h
+	src/mathlib/CMathUtils.cpp
+	src/mathlib/CMathUtils.h
+)
+
+source_group("mathlib" FILES ${CY_SRC_MATHLIB})
 
 set (CY_SRC_PARSER
 	src/parser/CommandParser.cpp
@@ -160,6 +173,7 @@ set(CY_SOURCE_FILES
 	${CY_SRC_INFO}
 	${CY_SRC_INIT}
 	${CY_SRC_SUBINIT}
+	${CY_SRC_MATHLIB}
 	${CY_SRC_PARSER}
 	${CY_SRC_PARSER_SOURCES}
 	${CY_SRC_PROCLIB}
