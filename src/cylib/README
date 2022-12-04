@@ -1,0 +1,9 @@
+CyEngine's Library (CyLib / cylib)
+
+A set of headers and functions that make the console make more productive to work with.
+
+Includes:
+- Type conversions
+- String Utilities
+- Sleep thread
+- System execution functions
