@@ -13,5 +13,5 @@ void GitRepoGui::create()
 
 void GitRepoGui::load()
 {
-	GitRepoGui gui; gui.create();
+	create();
 }

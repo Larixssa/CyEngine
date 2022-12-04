@@ -6,8 +6,8 @@
 
 class IUrlGui : public BaseGui
 {
-	void create();
 public:
+	static void create();
 	static std::string PARSE_IURL;
 	static void load();
 	static void update(int status);

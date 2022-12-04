@@ -12,11 +12,8 @@ void BaseGui::create() {}
 /// </summary>
 void BaseGui::load()
 {
-	// Define main class.
-	BaseGui bGui;
-
-	// Run create() function from class.
-	bGui.create();
+	// Run create() function.
+	create();
 }
 
 /// <summary>

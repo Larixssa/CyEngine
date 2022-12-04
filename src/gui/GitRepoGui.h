@@ -5,8 +5,8 @@
 
 class GitRepoGui : public BaseGui
 {
-	void create();
 public:
+	static void create();
 	static void load();
 };
 

@@ -3,8 +3,8 @@
 
 class BaseGui
 {
-	void create();
 public:
+	static void create();
 	static void load();
 	static void update(int status);
 };

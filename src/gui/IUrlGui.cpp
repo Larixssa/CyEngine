@@ -60,6 +60,5 @@ void IUrlGui::update(int status)
 
 void IUrlGui::load()
 {
-	IUrlGui gui;
-	gui.create();
+	create();
 }

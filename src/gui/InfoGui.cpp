@@ -31,10 +31,8 @@ void InfoGui::create()
 }
 
 void InfoGui::load()
-{
-	InfoGui gui;
-	
+{	
 	CyBits::ncNewLn();
-	gui.create();
+	create();
 	CyStdio::cPut(CyBits::repeatString("\n", 2));
 }

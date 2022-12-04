@@ -6,8 +6,8 @@
 
 class InfoGui : public BaseGui
 {
-	void create();
 public:
+	static void create();
 	static std::string DEFAULT_SPEC_INFO;
 	static void displayCredits();
 	static void displayConsoleInfo();
