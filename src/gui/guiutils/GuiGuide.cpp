@@ -23,7 +23,7 @@ std::string GuiGuide::createGuide(std::string guideContent)
 
 std::string GuiGuide::getExitString()
 {
-	return GuiGuide::createGuide(GuiGuide::DEFAULT_EXIT_GUIDE);
+	return GuiGuide::DEFAULT_EXIT_GUIDE;
 }
 
 void GuiGuide::pushGuide(std::string* pushGuideTable, int cSize)
@@ -32,4 +32,9 @@ void GuiGuide::pushGuide(std::string* pushGuideTable, int cSize)
 	{
 		CyStdio::cPut(GuiGuide::createGuide(pushGuideTable[i] + CyBits::gcNewLn()));
 	}
+}
+
+void GuiGuide::displayExitString()
+{
+	CyStdio::cPut(GuiGuide::createGuide(GuiGuide::getExitString()) + CyBits::repeatString("\n", 2));
 }

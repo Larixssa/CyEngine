@@ -11,6 +11,7 @@ public:
 	static std::string createGuide(std::string guideContent);
 	static std::string getExitString();
 	static void pushGuide(std::string* pushGuideTable, int cSize);
+	static void displayExitString();
 };
 
 #endif // GuiGuide.h
