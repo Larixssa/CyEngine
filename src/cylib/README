@@ -6,4 +6,5 @@ Includes:
 - Type conversions
 - String Utilities
 - Sleep thread
+- OS Platform checking
 - System execution functions
