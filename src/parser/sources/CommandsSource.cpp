@@ -8,6 +8,7 @@
 #include "sys/ProcessExec.h"
 #include "info/GitInfo.h"
 #include "gui/InfoGui.h"
+#include "browser/Browser.h"
 
 // GUI Includes
 #include "gui/GitRepoGui.h"
@@ -38,7 +39,11 @@ void CommandsSource::versionCommand(std::string tParse)
 void CommandsSource::getGitCommand(std::string tParse)
 {
 	if (Flag::checkFlag(tParse, "--info")) {
-		GitRepoGui::load();
+		GitRepoGui::load(false);
+	} else if (Flag::checkFlag(tParse, "--open")) {
+		Browser::openUrl("https://github.com/Larixssa/CyEngine.git");
+	} else if (Flag::checkFlag(tParse, "--pinfo")) {
+		GitRepoGui::load(true);
 	} else {
 		ProcessExec::processOpen("git"); CyBits::ncNewLn();
 	}
