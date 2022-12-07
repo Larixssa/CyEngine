@@ -23,6 +23,11 @@ std::string CyBits::gcSpace()
 	return " ";
 }
 
+std::string CyBits::backSpace(int times)
+{
+	return CyBits::repeatString("\b", times);
+}
+
 std::string CyBits::repeatString(std::string str, int length)
 {
 	int MAX_LENGTH = 100; 
