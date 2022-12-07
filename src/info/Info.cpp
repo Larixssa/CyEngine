@@ -5,8 +5,8 @@
 #include<string>
 
 std::string Info::CONSOLE_NAME = "CyEngine Console";
-std::string Info::VERSION_STRING = "0.0.1";
-std::string Info::RELEASE_STRING = "01-al12";
+std::string Info::VERSION_STRING = "0.0.11";
+std::string Info::RELEASE_STRING = "01-al13";
 
 std::string Info::getCredits()
 {
