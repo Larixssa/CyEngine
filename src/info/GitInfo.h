@@ -7,7 +7,7 @@ class GitInfo
 {
 public:
 	static std::string REPOSITORY_LINK;
-	static void getGitInfo();
+	static void getGitInfo(bool requireInput);
 	static std::string getRepoLink();
 };
 
