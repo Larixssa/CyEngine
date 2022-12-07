@@ -35,7 +35,7 @@ void CommandCalls::callCommandParser(std::string cmdToParse)
 		if (StringUtils::strCompare(cmdToParse, "exit")) {
 			CommandsSource::exitCommand();
 		} else {
-			CyBits::ncNewLn(); Init::initClient(false, false, false);
+			Init::initClient(false, false, false);
 		}
 	}
 }

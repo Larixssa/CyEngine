@@ -34,6 +34,8 @@ void IUrlGui::create()
 
 	CyStdio::cGet(uInput);
 
+	CyBits::ncNewLn();
+
 	if (!uInput.empty()) {
 		IUrlGui::PARSE_IURL = uInput;
 		update(1);
@@ -44,9 +46,10 @@ void IUrlGui::create()
 
 void IUrlGui::update(int status)
 {
+	std::string parse_var = IUrlGui::PARSE_IURL;
 	if (status == 1) // Check if string equals to exit or not.
 	{
-		if (!StringUtils::strCompare(IUrlGui::PARSE_IURL, "exit")) {
+		if (!StringUtils::strCompare(parse_var, "exit")) {
 			Browser::openUrl(IUrlGui::PARSE_IURL);
 		} else {
 			update(0);

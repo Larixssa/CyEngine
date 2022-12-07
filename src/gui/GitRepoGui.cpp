@@ -6,9 +6,19 @@
 
 void GitRepoGui::create()
 {
-	CyStdio::cPut("\n[CyEngine - README]" + CyBits::gcNewLn());
+	CyStdio::cPut(
+		CyBits::repeatString("\n", 2) + 
+		"[CyEngine - README]" + 
+		CyBits::gcNewLn()
+	);
+
 	GitInfo::getGitInfo();
-	CyStdio::cPut("Repository Link: " + GitInfo::getRepoLink() + CyBits::repeatString("\n", 2));
+
+	CyStdio::cPut(
+		"Repository Link: " + 
+		GitInfo::getRepoLink() + 
+		CyBits::repeatString("\n", 3)
+	);
 }
 
 void GitRepoGui::load()
