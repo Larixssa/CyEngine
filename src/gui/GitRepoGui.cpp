@@ -4,7 +4,7 @@
 #include "cystdio/CyBits.h"
 #include "info/GitInfo.h"
 
-void GitRepoGui::create()
+void GitRepoGui::create(bool requireInput)
 {
 	CyStdio::cPut(
 		CyBits::repeatString("\n", 2) + 
@@ -12,16 +12,25 @@ void GitRepoGui::create()
 		CyBits::gcNewLn()
 	);
 
-	GitInfo::getGitInfo();
+	if (requireInput) {
+		update(1);
+	} else {
+		update(2);
+	}
 
-	CyStdio::cPut(
-		"Repository Link: " + 
-		GitInfo::getRepoLink() + 
-		CyBits::repeatString("\n", 3)
-	);
+	CyStdio::cPut(CyBits::repeatString("\n", 2));
 }
 
-void GitRepoGui::load()
+void GitRepoGui::update(int status)
 {
-	create();
+	if (status == 1) {
+		GitInfo::getGitInfo(true);
+	} else if (status == 2) {
+		GitInfo::getGitInfo(false);
+	}
+}
+
+void GitRepoGui::load(bool requireInput)
+{
+	create(requireInput);
 }

@@ -6,8 +6,9 @@
 class GitRepoGui : public BaseGui
 {
 public:
-	static void create();
-	static void load();
+	static void create(bool requireInput);
+	static void update(int status);
+	static void load(bool requireInput);
 };
 
 #endif // GitRepoGui.h
