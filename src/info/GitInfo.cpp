@@ -49,7 +49,7 @@ void GitInfo::getGitInfo(bool requireInput)
 	CyStdio::cPut(
 		"Repository Link: " +
 		GitInfo::getRepoLink() +
-		CyBits::repeatString("\n", 2)
+		CyBits::repeatString("\n", 1)
 	);
 
 	if (requireInput)

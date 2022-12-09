@@ -14,7 +14,7 @@ public:
 	static std::string getVersion();
 	static std::string getRelease();
 	static std::string getInfo();
-	static std::string getInfoOf(std::string infoOf);
+	static std::string getInfoOf(std::string infoOf = "version");
 };
 
 #endif // Info.h
