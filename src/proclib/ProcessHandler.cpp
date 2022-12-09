@@ -4,7 +4,7 @@
 
 #include<string>
 
-std::string ProcessHandler::DEFAULT_PROCESS_ERROR_TYPE = "CANCELLED";
+std::string ProcessHandler::DEFAULT_PROCESS_ERROR_TYPE = "cancelled";
 
 std::string ProcessHandler::getProcessError(std::string processErrorType)
 {
