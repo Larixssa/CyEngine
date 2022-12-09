@@ -5,6 +5,8 @@
 #include "cystdio/CyBits.h"
 #include "display/Prompt.h"
 #include "browser/Browser.h"
+#include "proclib/ProcessHandler.h"
+#include "proclib/Warning.h"
 
 #include<string>
 
@@ -54,10 +56,18 @@ void GitInfo::getGitInfo(bool requireInput)
 
 	if (requireInput)
 	{
+		Warning::DEFAULT_SPEC_VALUE = "Option";
+
+		CyStdio::cPut(CyBits::gcNewLn());
 		Prompt::displayYxOptionPrompt();
 		CyStdio::cGet(openOption);
+
 		if (StringUtils::strCompare(openOption, "y") || StringUtils::strCompare(openOption, "Y")) {
 			Browser::openUrl("https://github.com/Larixssa/CyEngine.git");
+		} else if (StringUtils::strCompare(openOption, "x") || StringUtils::strCompare(openOption, "X")) {
+			CyStdio::cPut(StringUtils::surroundString(ProcessHandler::cancelledProcess(), "\n", "\n"));
+		} else if (openOption.empty()) {
+			CyStdio::cPut(StringUtils::surroundString(Warning::emptyShellInput(), "\n", "\n"));
 		}
 	}
 }
